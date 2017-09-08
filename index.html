@@ -6,104 +6,24 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-    <h2>Time Left: <span id="show-number">1000</span></h2>
-	<h2>Correct Answers: <span id="correctNumber">0</span></h2>
-	<h2>Incorrect Answers: <span id="incorrectNumber">0</span></h2>
-
-
-	<div class="quiz">
-
-				<div class="card col-md-10">
-				  <div class="card-header">
-				    Which of the following Superheroes was not a founding Avenger?
-				  </div>
-					<div class="card-body">
-					<label class="radio-inline"><input type="radio" name="q1"> Captain America</label>
-					<label class="radio-inline"><input type="radio" name="q1"> Tony Stark</label>
-					<label class="radio-inline"><input type="radio" name="q1"> Black Widow</label>
-					<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Scarlet Witch</label>
-				  </div>
-				</div>
+  
+  <div class="container">
+    <div class="timer">10</div>
+    <div>Wins: <span class="winCounter">0</span></div>
+    <div>Questions: <span class="questionCounter">0</span></div>
+  </div>
 
 
-				<div class="card col-md-10">
-				  <div class="card-header">
-				    Wonder Woman is sometimes refered to as the Spirit of what?
-				  </div>
-					<div class="card-body">
-					<label class="radio-inline"><input type="radio" name="q2"> Justice</label>
-					<label class="radio-inline correct"><input type="radio" name="q2" class="correctAns"> Truth</label>
-					<label class="radio-inline"><input type="radio" name="q2"> War</label>
-					<label class="radio-inline"><input type="radio" name="q2"> Vengence</label>
-				  </div>
-				</div>
+  <div class="container">
+    <div class="question"></div>
+    <div class="image"></div>
+    <div class="a1"></div>
+    <div class="a2"></div>
+    <div class="a3"></div>
+    <div class="a4"></div>
+  </div>
 
-
-				<div class="card col-md-10">
-				  <div class="card-header">
-				    When Superman feared that he could be comprimised by his enemies, who did he give a piece of Kryptonite to so they could stop him should the need arise?
-				  </div>
-					<div class="card-body">
-					<label class="radio-inline"><input type="radio" name="q3"> The President of the U.S</label>
-					<label class="radio-inline correct"><input type="radio" name="q3" class="correctAns"> Batman</label>
-					<label class="radio-inline"><input type="radio" name="q3"> Aquaman</label>
-					<label class="radio-inline"><input type="radio" name="q3"> Green Lantern</label>
-				  </div>
-				</div>
-
-
-				<div class="card col-md-10">
-				  <div class="card-header">
-				    In the Image Comic series "Saga," what animal companion started as the partner of the Bounty Hunter The Will?
-				  </div>
-					<div class="card-body">
-					<label class="radio-inline"><input type="radio" name="q4"> Devil Dog</label>
-					<label class="radio-inline"><input type="radio" name="q4"> Theiving Rat</label>
-					<label class="radio-inline correct"><input type="radio" name="q4" class="correctAns"> Lying Cat</label>
-					<label class="radio-inline"><input type="radio" name="q4"> Old Crow</label>
-				  </div>
-				</div>
-
-
-<!-- 				<div class="card col-md-10">
-				  <div class="card-header">
-				    Which of the following character was actually featured in a comic book that a major company that was asking for your money in return?
-				  </div>
-					<div class="card-body">
-					<label class="radio-inline"><input type="radio" name="q"> Arm Fall Off Boy</label>
-					<label class="radio-inline"><input type="radio" name="q"> Matter-Eater-Lad</label>
-					<label class="radio-inline"><input type="radio" name="q"> Mister Sinister</label>
-					<label class="radio-inline correct"><input type="radio" name="correctAns"> Trick Question, they're all real</label>
-				  </div>
-				</div> -->
-
-
-				<div class="card col-md-10">
-				  <div class="card-header">
-				    In Neil Gaimen's "Sandman" series, which of his siblings does the protagonist, Dream, get along with the best?
-				  </div>
-					<div class="card-body">
-					<label class="radio-inline correct"><input type="radio" name="q5" class="correctAns"> Death</label>
-					<label class="radio-inline"><input type="radio" name="q5"> Desire</label>
-					<label class="radio-inline"><input type="radio" name="q5"> Destiny</label>
-					<label class="radio-inline"><input type="radio" name="q5"> Delirium</label>
-				  </div>
-				</div>
-
-
-<!-- 				<div class="card col-md-10">
-				  <div class="card-header">
-				    Which Super Hero Team is the best?
-				  </div>
-					<div class="card-body">
-					<label class="radio-inline correct"><input type="radio" name="correctAns"> The Avengers</label>
-					<label class="radio-inline correct"><input type="radio" name="correctAns"> The Justice League</label>
-					<label class="radio-inline correct"><input type="radio" name="correctAns"> The X-Men</label>
-					<label class="radio-inline correct"><input type="radio" name="correctAns"> The Teen Titans</label>
-				  </div>
-				</div> -->
-	</div>
+  <button class="startButton">Start Game</button>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
