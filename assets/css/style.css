@@ -1,3 +1,13 @@
 body {
  background-image: url("../images/superhero.jpg")
 }
+
+.image {
+	width: 700px;
+	height: 400px;
+}
+
+.ansImage {
+	height: 80%;
+	margin: 20px;
+}

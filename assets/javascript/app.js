@@ -58,7 +58,7 @@ function firstQuestion() {
 
 function firstAnswer() {
 	$(".answer").html("Answer: The founding Avengers were Captain America, Iron Man, The Hulk, Thor, Ant Man, and The Wasp.");
-	$(".image").html("<img src='../images/Avengers1.jpg' alt='image'>");
+	$(".image").html("<img src='assets/images/Avengers1.jpg' class='ansImage' alt='image'>");
 	winCheck();
 
 };
@@ -74,12 +74,12 @@ function secondQuestion() {
 
 function secondAnswer() {
 	$(".answer").html("Answer: Defending the Greek principals of democracy.  Her mother, Queen Hippolyta, saw the United States as the last, best, hope for the light of Democracy in a world that was swiftly falling into totalarianism.");
-	$(".image").html("<img src='../images/wwcostume.jpg' alt='image'>");
+	$(".image").html("<img src='assets/images/wwcostume.jpg' class='ansImage' alt='image'>");
 	winCheck ();
 };
 
 function thirdQuestion() {
-	$(".question").html("When Superman feared that he could be comprimised by his enemies, who did he give a piece of Kryptonite to stop him should the need arise?");
+	$(".question").html("When Superman feared that he could be comprimised by his enemies, to whom did he give a piece of Kryptonite to stop him should the need arise?");
 	$(".a1").html('<label class="radio-inline"><input type="radio" name="q1"> The President of the United States</label>');
 	$(".a2").html('<label class="radio-inline"><input type="radio" name="q1"> Green Lantern</label>');
 	$(".a3").html('<label class="radio-inline"><input type="radio" name="q1"> Ma and Pa Kent</label>');
@@ -90,14 +90,14 @@ function thirdQuestion() {
 
 function thirdAnswer() {
 	$(".answer").html("Correct Answer: Batman.  Superman trusted Batman's judgment and morality more than anyone else on the planet.");
-	$(".image").html("<img src='../images/kryptonite.jpg' alt='image'>");
+	$(".image").html("<img src='assets/images/kryptonite.jpg' class='ansImage' alt='image'>");
 	winCheck();
 
 
 };
 
 function fourthQuestion() {
-	$(".question").html("In the Image Comic series <b>Saga</b>, what animal companion started as the partner of the Bounty Hunter, 'The Will'?");
+	$(".question").html("In the Image Comic series 'Saga', what animal companion started as the partner of the Bounty Hunter, 'The Will'?");
 	$(".a1").html('<label class="radio-inline"><input type="radio" name="q1"> Devil Dog</label>');
 	$(".a2").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Lying Cat</label>');
 	$(".a3").html('<label class="radio-inline"><input type="radio" name="q1"> Storm Crow</label>');
@@ -107,8 +107,8 @@ function fourthQuestion() {
 };
 
 function fourthAnswer() {
-	$(".answer").html("Correct Answer: Lying Cat.  Lying Cats always know hen someone is lying, and will say if they are.  A useful tool for a bounty hunter.");
-	$(".image").html("<img src='../images/lyingCat.jpg' alt='image'>");
+	$(".answer").html("Correct Answer: Lying Cat.  Lying Cats always know hen someone is lying, and will say if they are.  A useful skill for a bounty hunter.");
+	$(".image").html("<img src='assets/images/lyingCat.jpg' class='ansImage' alt='image'>");
 	winCheck();
 
 };
@@ -125,19 +125,13 @@ function fifthQuestion() {
 
 function fifthAnswer() {
 	$(".answer").html("Correct Answer: Trick Question.  They're all real.");
-	$(".image1").html("<img src='../images/AFOB.jpg' alt='image'>");
-	$(".image2").html("<img src='../images/mel.jpg' alt='image'>");
-	$(".image3").html("<img src='../images/misterSinister.png' alt='image'>");
-	$(".image4").html("<img src='../images/ladystiltman.jpg' alt='image'>");
+	$(".image").html("<img src='assets/images/rNames.png' class='ansImage' alt='image'>");
+
 	winCheck();
 
 };
 
 function sixthQuestion() {
-	$(".image1").html("  ");
-	$(".image2").html("  ");
-	$(".image3").html("  ");
-	$(".image4").html("  ");
 	$(".question").html("The protagonist of Neil Gaimen's fantasy comic series 'Sandman', is Dream the Endless.  Which of his six siblings does he get along the best with?");
 	$(".a1").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Death the Endless</label>');
 	$(".a2").html('<label class="radio-inline"><input type="radio" name="q1"> Destiny the Endless</label>');
@@ -149,7 +143,7 @@ function sixthQuestion() {
 
 function sixthAnswer() {
 	$(".answer").html("Correct Answer: Death the Endless.  Dispite their clashing personalities, Death's upbeat outlook on this prescious gift called 'life' often drags Dream out of his dour moods.");
-	$(".image").html("<img src='../images/deathDream.jpg' alt='image'>");
+	$(".image").html("<img src='assets/images/deathDream.jpg' class='ansImage' alt='image'>");
 	winCheck();
 
 };
@@ -166,7 +160,7 @@ function seventhQuestion() {
 
 function seventhAnswer() {
 	$(".answer").html("There is no 'correct' answer!  They're all great!    I'm just glad you have a favorite.<br>Or maybe you don't.  That's OK too!");
-	$(".image").html("<img src='../images/falloutUp.jpg' alt='image'>");
+	$(".image").html("<img src='assets/images/falloutUp.jpg' class='ansImage' alt='image'>");
 	winCheck();
 
 };
