@@ -5,20 +5,18 @@ var loss = 0
 var miss = 0
 var question = 0
 
-	setTimeout(firstQuestion, 5000);
-	setTimeout(firstAnswer, 10000);
-	setTimeout(secondQuestion, 30000);
-	setTimeout(secondAnswer, 40000);
+	$("#button1").on("click", firstQuestion);
+
 	setTimeout(thirdQuestion, 50000);
-	setTimeout(thirdAnswer, 60000);
+
 	setTimeout(fourthQuestion, 70000);
-	setTimeout(fourthAnswer, 80000);
+
 	setTimeout(fifthQuestion, 90000);
-	setTimeout(fifthAnswer, 100000);
+
 	setTimeout(sixthQuestion, 110000);
-	setTimeout(sixthAnswer, 120000);
+
 	setTimeout(seventhQuestion, 130000);
-	setTimeout(seventhAnswer, 140000);
+
 
 
 
@@ -65,12 +63,17 @@ function firstQuestion() {
 	$(".a3").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Iron Man</label>');
 	$(".a4").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Ant Man</label>');	
 	questionStart ();
+	setTimeout(firstAnswer, 10000);
+	$("#submitButton").html('<button id="button2">Submit</button>');
+	$("#button2").on("click", firstAnswer);
 };
 
 function firstAnswer() {
 	$(".answer").html("Answer: The founding Avengers were Captain America, Iron Man, The Hulk, Thor, Ant Man, and The Wasp.");
 	$(".image").html("<img src='assets/images/AvengersFit.jpg' alt='image'>");
 	winCheck();
+	$("#submitButton").html('<button id="button3">Next Question</button>');
+	$("#button3").on("click", secondQuestion);
 
 };
 
@@ -81,12 +84,17 @@ function secondQuestion() {
 	$(".a3").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Defending the Greek principals of democracy across the world</label>');
 	$(".a4").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Revenge for her destroyed homeland</label>');
 	questionStart ();
+	setTimeout(secondAnswer, 10000);
+	$("#submitButton").html('<button id="button4">Submit</button>');
+	$("#button4").on("click", secondAnswer);
 };
 
 function secondAnswer() {
 	$(".answer").html("Answer: Defending the Greek principals of democracy.  Her mother, Queen Hippolyta, saw the United States as the last, best, hope for the light of Democracy in a world that was swiftly falling into totalarianism.");
 	$(".image").html("<img src='assets/images/wwCostumeFit.jpg' alt='image'>");
 	winCheck ();
+	$("#submitButton").html('<button id="button5">Next Question</button>');
+	$("#button5").on("click", thirdQuestion);
 };
 
 function thirdQuestion() {
@@ -96,6 +104,9 @@ function thirdQuestion() {
 	$(".a3").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Ma and Pa Kent</label>');
 	$(".a4").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Batman</label>');
 	questionStart ();
+	setTimeout(thirdAnswer, 10000);
+	$("#submitButton").html('<button id="button6">Submit</button>');
+	$("#button6").on("click", thirdAnswer);
 
 };
 
@@ -103,6 +114,8 @@ function thirdAnswer() {
 	$(".answer").html("Correct Answer: Batman.  Superman trusted Batman's judgment and morality more than anyone else on the planet.");
 	$(".image").html("<img src='assets/images/kryptoniteFit.jpg' alt='image'>");
 	winCheck();
+	$("#submitButton").html('<button id="button7">Next Question</button>');
+	$("#button7").on("click", fourthQuestion);
 
 
 };
@@ -114,6 +127,9 @@ function fourthQuestion() {
 	$(".a3").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Storm Crow</label>');
 	$(".a4").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Thieving Rat</label>');	
 	questionStart ();
+	setTimeout(fourthAnswer, 10000);
+	$("#submitButton").html('<button id="button8">Submit</button>');
+	$("#button8").on("click", fourthAnswer);
 
 };
 
@@ -121,6 +137,8 @@ function fourthAnswer() {
 	$(".answer").html("Correct Answer: Lying Cat.  Lying Cats always know hen someone is lying, and will say if they are.  A useful skill for a bounty hunter.");
 	$(".image").html("<img src='assets/images/lyingCatFit.jpg' alt='image'>");
 	winCheck();
+	$("#submitButton").html('<button id="button9">Next Question</button>');
+	$("#button9").on("click", fifthQuestion);
 
 };
 
@@ -131,14 +149,18 @@ function fifthQuestion() {
 	$(".a3").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Mister Sinister</label>');
 	$(".a4").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Lady Stilt Man</label>');	
 	questionStart ();
+	setTimeout(fifthAnswer, 10000);
+	$("#submitButton").html('<button id="button10">Submit</button>');
+	$("#button10").on("click", fifthAnswer);
 
 };
 
 function fifthAnswer() {
 	$(".answer").html("Correct Answer: Trick Question.  They're all real.");
 	$(".image").html("<img src='assets/images/rNamesFit.png' alt='image'>");
-
-	winCheck();
+	winCheck();	
+	$("#submitButton").html('<button id="button11">Next Question</button>');
+	$("#button11").on("click", sixthQuestion);
 
 };
 
@@ -149,6 +171,9 @@ function sixthQuestion() {
 	$(".a3").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Dispair the Endless</label>');
 	$(".a4").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Delirium the Endless</label>');	
 	questionStart ();
+	setTimeout(sixthAnswer, 10000);
+	$("#submitButton").html('<button id="button12">Submit</button>');
+	$("#button12").on("click", sixthAnswer);
 
 };
 
@@ -156,6 +181,8 @@ function sixthAnswer() {
 	$(".answer").html("Correct Answer: Death the Endless.  Dispite their clashing personalities, Death's upbeat outlook on this prescious gift called 'life' often drags Dream out of his dour moods.");
 	$(".image").html("<img src='assets/images/deathDreamFit.jpg' alt='image'>");
 	winCheck();
+	$("#submitButton").html('<button id="button13">Next Question</button>');
+	$("#button13").on("click", seventhQuestion);
 
 };
 
@@ -166,6 +193,9 @@ function seventhQuestion() {
 	$(".a3").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> The Teen Titans</label>');
 	$(".a4").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> The X-Men</label>');
 	questionStart ();
+	setTimeout(seventhAnswer, 10000);
+	$("#submitButton").html('<button id="button14">Submit</button>');
+	$("#button14").on("click", seventhAnswer);
 
 };
 
@@ -173,6 +203,8 @@ function seventhAnswer() {
 	$(".answer").html("There is no 'correct' answer!  They're all great!    I'm just glad you have a favorite.<br>Or maybe you don't.  That's OK too!");
 	$(".image").html("<img src='assets/images/falloutFit.jpg' class='ansImage' alt='image'>");
 	winCheck();
+	$("#submitButton").html('<button id="button7">Restart Quiz</button>');
+	$("#button1").on("click", firstQuestion);
 
 };
 
