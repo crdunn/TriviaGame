@@ -4,27 +4,21 @@ var wins = 0
 
 var question = 0
 
+	setTimeout(firstQuestion, 10000);
+	setTimeout(firstAnswer, 20000);
+	setTimeout(secondQuestion, 30000);
+	setTimeout(secondAnswer, 40000);
+	setTimeout(thirdQuestion, 50000);
+	setTimeout(thirdAnswer, 60000);
+	setTimeout(fourthQuestion, 70000);
+	setTimeout(fourthAnswer, 80000);
+	setTimeout(fifthQuestion, 90000);
+	setTimeout(fifthAnswer, 100000);
+	setTimeout(sixthQuestion, 110000);
+	setTimeout(sixthAnswer, 120000);
+	setTimeout(seventhQuestion, 130000);
+	setTimeout(seventhAnswer, 140000);
 
-
-
-// $("startButton").click(startGame);
-
-// function startGame () {
-	setTimeout(firstQuestion, 0);
-	setTimeout(firstAnswer, 10000);
-	setTimeout(secondQuestion, 20000);
-	setTimeout(secondAnswer, 30000);
-	setTimeout(thirdQuestion, 40000);
-	setTimeout(thirdAnswer, 50000);
-	setTimeout(fourthQuestion, 60000);
-	setTimeout(fourthAnswer, 70000);
-	setTimeout(fifthQuestion, 80000);
-	setTimeout(fifthAnswer, 90000);
-	setTimeout(sixthQuestion, 100000);
-	setTimeout(sixthAnswer, 110000);
-	setTimeout(seventhQuestion, 120000);
-	setTimeout(seventhAnswer, 130000);
-// };
 
 
 function questionStart () {
@@ -55,16 +49,16 @@ function winCheck(){
 
 function firstQuestion() {
 	$(".question").html(" Which of the following Superheroes was not a founding Avenger?");
-	$(".a1").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns">  Scarlet Witch</label>');
+	$(".a1").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns">  Black Widow</label>');
 	$(".a2").html('<label class="radio-inline"><input type="radio" name="q1"> Captain America</label>');
 	$(".a3").html('<label class="radio-inline"><input type="radio" name="q1"> Iron Man</label>');
-	$(".a4").html('<label class="radio-inline"><input type="radio" name="q1"> Black Widow</label>');	
+	$(".a4").html('<label class="radio-inline"><input type="radio" name="q1"> Ant Man</label>');	
 	questionStart ();
 };
 
 function firstAnswer() {
-	$(".answer").html("Answer: The founding Avengers were Captain America, Iron Man, The Hulk, Thor, Black Widow, and Hawkeye.");
-	$(".image").html("<img src='../images/AvengersGroupShot.jpg' alt='image'>");
+	$(".answer").html("Answer: The founding Avengers were Captain America, Iron Man, The Hulk, Thor, Ant Man, and The Wasp.");
+	$(".image").html("<img src='../images/Avengers1.jpg' alt='image'>");
 	winCheck();
 
 };
