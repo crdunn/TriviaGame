@@ -1,13 +1,12 @@
-body {
- background-image: url("../images/superhero.jpg")
+/*body {
+ background-image: url("../images/superhero.jpg")*/
 }
 
 .image {
-	width: 700px;
-	height: 400px;
+	width: 480px;
+	height: 360px;
 }
 
-.ansImage {
-	height: 80%;
-	margin: 20px;
+.radio-inline {
+	margin-left: 20px;
 }
