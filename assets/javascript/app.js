@@ -1,27 +1,17 @@
 
-
+var timer
 var wins = 0
 var loss = 0
 var miss = 0
 var question = 0
 
-	$("#button1").on("click", firstQuestion);
-
-	setTimeout(thirdQuestion, 50000);
-
-	setTimeout(fourthQuestion, 70000);
-
-	setTimeout(fifthQuestion, 90000);
-
-	setTimeout(sixthQuestion, 110000);
-
-	setTimeout(seventhQuestion, 130000);
-
+$("#button1").on("click", firstQuestion);
 
 
 
 function questionStart () {
-	$(".image").html(" ");
+	timer = setTimeout(firstAnswer, 10000);
+	$(".image").html('<img src="assets/images/white.jpg" alt="image">');
 	$(".answer").html("Answer:")
 	question++
 	$(".questionCounter").html(question);
@@ -36,6 +26,7 @@ function questionStart () {
 
 function winCheck(){
 	clearInterval (displayTime);
+	clearTimeout(timer);
 	$(".timer").html("0");
 	$(".correct").attr("style","font-weight:bold");
 	var checked = $(':radio[class="correctAns"]:checked').length;
@@ -63,14 +54,14 @@ function firstQuestion() {
 	$(".a3").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Iron Man</label>');
 	$(".a4").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Ant Man</label>');	
 	questionStart ();
-	setTimeout(firstAnswer, 10000);
 	$("#submitButton").html('<button id="button2">Submit</button>');
 	$("#button2").on("click", firstAnswer);
 };
 
 function firstAnswer() {
-	$(".answer").html("Answer: The founding Avengers were Captain America, Iron Man, The Hulk, Thor, Ant Man, and The Wasp.");
-	$(".image").html("<img src='assets/images/AvengersFit.jpg' alt='image'>");
+	console.log ("firstanswer")
+	$(".answer").html("Answer: In 'The Avengers #1', the founding Avengers were Captain America, Iron Man, The Hulk, Thor, Ant Man, and The Wasp.");
+	$(".image").html("<img src='assets/images/avengersFit.jpg' alt='image'>");
 	winCheck();
 	$("#submitButton").html('<button id="button3">Next Question</button>');
 	$("#button3").on("click", secondQuestion);
@@ -84,7 +75,6 @@ function secondQuestion() {
 	$(".a3").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Defending the Greek principals of democracy across the world</label>');
 	$(".a4").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Revenge for her destroyed homeland</label>');
 	questionStart ();
-	setTimeout(secondAnswer, 10000);
 	$("#submitButton").html('<button id="button4">Submit</button>');
 	$("#button4").on("click", secondAnswer);
 };
@@ -111,6 +101,7 @@ function thirdQuestion() {
 };
 
 function thirdAnswer() {
+	clearInterval (thirdAnswer);
 	$(".answer").html("Correct Answer: Batman.  Superman trusted Batman's judgment and morality more than anyone else on the planet.");
 	$(".image").html("<img src='assets/images/kryptoniteFit.jpg' alt='image'>");
 	winCheck();
@@ -134,6 +125,7 @@ function fourthQuestion() {
 };
 
 function fourthAnswer() {
+	clearInterval (fourthAnswer);
 	$(".answer").html("Correct Answer: Lying Cat.  Lying Cats always know hen someone is lying, and will say if they are.  A useful skill for a bounty hunter.");
 	$(".image").html("<img src='assets/images/lyingCatFit.jpg' alt='image'>");
 	winCheck();
@@ -143,6 +135,7 @@ function fourthAnswer() {
 };
 
 function fifthQuestion() {
+	$(".image").html('<img src="assets/images/white.jpg" alt="image">');
 	$(".question").html("Which of the following ridiculous names belongs to an actual superhero in mainline DC/Marvel continunity?");
 	$(".a1").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Arm-Fall-Off Boy</label>');
 	$(".a2").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Matter-Eater Lad</label>');
@@ -156,8 +149,9 @@ function fifthQuestion() {
 };
 
 function fifthAnswer() {
+	clearInterval (fifthAnswer);
 	$(".answer").html("Correct Answer: Trick Question.  They're all real.");
-	$(".image").html("<img src='assets/images/rNamesFit.png' alt='image'>");
+	$(".image").html("<img src='assets/images/rNamesFit.jpg' alt='image'>");
 	winCheck();	
 	$("#submitButton").html('<button id="button11">Next Question</button>');
 	$("#button11").on("click", sixthQuestion);
@@ -165,6 +159,7 @@ function fifthAnswer() {
 };
 
 function sixthQuestion() {
+	$(".image").html('<img src="assets/images/white.jpg" alt="image">');
 	$(".question").html("The protagonist of Neil Gaimen's fantasy comic series 'Sandman', is Dream the Endless.  Which of his six siblings does he get along the best with?");
 	$(".a1").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> Death the Endless</label>');
 	$(".a2").html('<label class="radio-inline"><input type="radio" name="q1" class="wrong"> Destiny the Endless</label>');
@@ -178,6 +173,7 @@ function sixthQuestion() {
 };
 
 function sixthAnswer() {
+	clearInterval (sixthAnswer);
 	$(".answer").html("Correct Answer: Death the Endless.  Dispite their clashing personalities, Death's upbeat outlook on this prescious gift called 'life' often drags Dream out of his dour moods.");
 	$(".image").html("<img src='assets/images/deathDreamFit.jpg' alt='image'>");
 	winCheck();
@@ -187,6 +183,7 @@ function sixthAnswer() {
 };
 
 function seventhQuestion() {
+	$(".image").html('<img src="assets/images/white.jpg" alt="image">');
 	$(".question").html("Which Superhero team is the best?");
 	$(".a1").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> The Justice League</label>');
 	$(".a2").html('<label class="radio-inline correct"><input type="radio" name="q1" class="correctAns"> The Avengers</label>');
@@ -200,11 +197,10 @@ function seventhQuestion() {
 };
 
 function seventhAnswer() {
+	clearInterval (seventhAnswer);
 	$(".answer").html("There is no 'correct' answer!  They're all great!    I'm just glad you have a favorite.<br>Or maybe you don't.  That's OK too!");
 	$(".image").html("<img src='assets/images/falloutFit.jpg' class='ansImage' alt='image'>");
 	winCheck();
-	$("#submitButton").html('<button id="button7">Restart Quiz</button>');
-	$("#button1").on("click", firstQuestion);
 
 };
 
